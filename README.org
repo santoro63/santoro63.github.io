@@ -1,0 +1,34 @@
+#+title: README
+#+author: Alex S.
+
+* About This Repository
+
+This repo is for my Github pages presence, where I hope to share blogs about my different technology adventures.
+Since I am an Emacs fanboy, the goal is to see how much we can do via Emacs and org-mode.
+
+* Tooling
+
+To build this site we use:
++ Emacs (of course!)
++ org-mode 
++ (G)Make
+
+For development support we use:
++ python 3 (and http.server) to run a local static-file serving server
+
+
+* Building
+
+Most common commands are:
++ =make build= creates the website and puts it in the [[./docs][docs]] subdirectory
++ =make clean= cleans everything up
++ =make help= gives you a list of available build commands
+
+
+* Directory Structure
+
+| Directory | Description                                                             |
+|-----------+-------------------------------------------------------------------------+
+| src       | All files that make up the website go here                              |
+| docs      | Where the generated website is placed (and where github wants it to be) |
+
