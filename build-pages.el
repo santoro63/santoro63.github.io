@@ -4,7 +4,6 @@
 (require 'ox-publish)
 
 ;; configuration
-(setq dest-dir "docs/")    ; where the output will be placed
 
 (setq org-publish-project-alist
       '(
@@ -12,6 +11,10 @@
          :base-directory "src/"
          :base-extension "org"
          :recursive t
+	 :with-author nil
+	 :with-date nil
+	 :with-toc nil
+	 :section-numbers nil
          :publishing-directory "docs/"
          :publishing-function org-html-publish-to-html)
 
@@ -24,6 +27,10 @@
 
 	))
 
+(setq org-html-validation-link nil            ;; Don't show validation link
+      org-html-head-include-scripts nil       ;; Use our own scripts
+      org-html-head-include-default-style nil ;; Use our own styles
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 ;; execution
 (org-publish-all t)
